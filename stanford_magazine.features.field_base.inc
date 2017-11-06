@@ -31,6 +31,32 @@ function stanford_magazine_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_s_mag_article_collection'.
+  $field_bases['field_s_mag_article_collection'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_mag_article_collection',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'stanford_magazine_collection',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_s_mag_article_date'.
   $field_bases['field_s_mag_article_date'] = array(
     'active' => 1,
@@ -215,32 +241,6 @@ function stanford_magazine_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'paragraphs',
-  );
-
-  // Exported field_base: 'field_s_mag_article_series'.
-  $field_bases['field_s_mag_article_series'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_s_mag_article_series',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'stanford_magazine_series',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_s_mag_article_topics'.

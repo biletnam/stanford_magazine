@@ -214,6 +214,56 @@ function stanford_magazine_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-stanford_magazine_article-field_s_mag_article_collection'.
+  $field_instances['node-stanford_magazine_article-field_s_mag_article_collection'] = array(
+    'bundle' => 'stanford_magazine_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'These terms identify the collections associated with this article. Select one or more collections.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_mag_article_collection',
+    'label' => 'Collection',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-stanford_magazine_article-field_s_mag_article_date'.
   $field_instances['node-stanford_magazine_article-field_s_mag_article_date'] = array(
     'bundle' => 'stanford_magazine_article',
@@ -1005,67 +1055,6 @@ Each of these pre-defined paragraph types supports a different type of content.'
   );
 
   // Exported field_instance:
-  // 'node-stanford_magazine_article-field_s_mag_article_series'.
-  $field_instances['node-stanford_magazine_article-field_s_mag_article_series'] = array(
-    'bundle' => 'stanford_magazine_article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'These terms identify the series associated with this article. Select one or more series.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-      'stanford_featured_mag_article' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-      'stanford_mag_article' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'taxonomy' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_s_mag_article_series',
-    'label' => 'Series',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance:
   // 'node-stanford_magazine_article-field_s_mag_article_topics'.
   $field_instances['node-stanford_magazine_article-field_s_mag_article_topics'] = array(
     'bundle' => 'stanford_magazine_article',
@@ -1158,6 +1147,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
 </ol>
 </p>');
   t('Byline');
+  t('Collection');
   t('Dek');
   t('Eyebrow');
   t('Featured');
@@ -1167,10 +1157,9 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('Print');
   t('Publishing Date');
   t('Sections');
-  t('Series');
   t('These are the paragraphs for your article. 
 Each of these pre-defined paragraph types supports a different type of content.');
-  t('These terms identify the series associated with this article. Select one or more series.');
+  t('These terms identify the collections associated with this article. Select one or more collections.');
   t('These terms identify the topics associated with this article. Select up to three.');
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
   t('This indicates if this article will be featured on the homepage or other places. If setting this to "Featured" please verify that no other magazine articles are also set to "Featured".');
